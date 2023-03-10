@@ -1,0 +1,28 @@
+# Codeception Test Suite Configuration
+#
+# Suite for functional tests
+# Emulate web requests and make application process them
+# Include one of framework modules (Symfony2, Yii2, Laravel5, Phalcon4) to use it
+# Remove this suite if you don't use frameworks
+
+actor: FunctionalTester
+modules:
+    enabled:
+        # add a framework module here
+        - \Helper\Functional
+        - Asserts
+        - Cli
+        - WebDriver
+#------------------------------------------------------------------------------------------------------
+    config:
+        WebDriver:
+            browser: chrome
+            port: 4444
+            url: 'http://www.google.com'
+            window_size: 1200x2000
+#------------------------------------------------------------------------------------------------------
+gherkin:
+    contexts:
+        default:
+            - FunctionalTester
+#------------------------------------------------------------------------------------------------------

@@ -1,0 +1,12 @@
+.idea/*
+.DS_Store
+tests/_log/**
+<<<<<<< HEAD
+tests/_output/*
+=======
+>>>>>>> parent of 449323b (test)
+tests/_data/*
+tests/_support/_generated
+!.gitkeep
+tests/*.dist.yml
+vendor/
